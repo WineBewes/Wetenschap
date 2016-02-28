@@ -2,12 +2,34 @@
 <html ng-app="science">
 <head>
     <title>Wetenschap !</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/science.css" />
 </head>
 <body>
-     <script type="text/javascript" src="js/vendor/angular.min.js"></script>
-     <p>
-         {{"hello " + "you !"}}
-     </p>
+    <div id="main">
+        <h1>Wetenschap</h1>
+        <h2>Driehoeksmeetkunde</h2>
+        <h3>SOHCAHTOA</h3>
+        <ul>
+            <li>SOH : sinus = Other / Hypothenuse</li>
+            <li>CAH : cosinus = Adjacent / Hypothenuse</li>
+            <li>TOA : tangens = Other / Adjacent</li>
+        </ul>
+        <h3>Cirkel</h3>
+        <div ng-controller="CircleController as circle">
+            <div>r = 5</div>
+            <div>diameter = r * 2 = {{circle.diameter}} </div>
+            <div>omtrek = r * 2 * &Pi; = {{ circle.omtrek }} </div>
+            <div>oppervlakte = r&sup2; * &Pi; = {{ circle.oppervlakte }} </div>
+        </div>
+        <h3>Bol</h3>
+        <div ng-controller="SphereController as sphere">
+            <div>r = 5</div>
+            <div>oppervlakte = 4 * r&sup2; * &Pi; = {{ sphere.oppervlakte }} </div>
+            <div>volume = 4 * r&sup3; * &Pi / 3; = {{ sphere.volume }} </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/vendor/angular.min.js"></script>
+    <script type="text/javascript" src="js/app/science.js"></script>
 </body>
 </html>
